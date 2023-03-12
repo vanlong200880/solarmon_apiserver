@@ -118,10 +118,10 @@
     
   },
   mysql: {
-    host     : '103.110.86.197',
+    host     : '103.110.86.80',
     port     : 3306,
-    user		: 'solarmon_admin',
-    password     : 'Solarmon@123',
+    user		: 'solarmon',
+    password     : 'sL4e2dripBS5X8Jc',
     database : 'solarmon',
     # The maximum number of connections to create at once. (Default: 10)
     connectionLimit : 20000, 
@@ -154,10 +154,10 @@
 
      host : [ {
         # host : '192.168.2.4',
-        host: '103.1.236.202',
+        host: 'localhost',
         # auth : 'elastic:flexElas.',
         # protocol : 'http',
-        password: 'Pkh1qazxsw2',
+        #password: 'Pkh1qazxsw2',
         port : 6379
       }
     ],

@@ -3423,3 +3423,336 @@
 [2022-12-04T17:30:36.910] [INFO] main - No request file found for /uploads/2021/10/gong3-1634743526000.jpeg
 [2022-12-04T17:31:09.904] [INFO] main - No request file found for /uploads/2021/10/gong3-1634743526000.jpeg
 [2023-03-12T16:27:03.678] [INFO] main - Main start:  3001
+[2023-03-12T23:33:08.759] [INFO] main - Main start:  3002
+[2023-03-12T23:33:30.457] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:34:20.695] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:34:27.169] [INFO] main - No request file found for /api/MainProject/getListProjectByEmployee
+[2023-03-12T23:34:27.283] [INFO] main - No request file found for /favicon.ico
+[2023-03-12T23:34:30.172] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:35:24.886] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:35:26.060] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:36:09.297] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:36:10.222] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:36:10.395] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:36:10.574] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:36:10.911] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:36:11.101] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:40:55.239] [INFO] main - Main start:  3002
+[2023-03-12T23:41:00.818] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:41:01.948] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:41:02.194] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:41:02.364] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:41:02.528] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:41:02.696] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:41:02.857] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:41:03.008] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:41:03.177] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:43:43.343] [INFO] main - Main start:  3002
+[2023-03-12T23:43:48.494] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:43:49.072] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:43:49.315] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:43:49.473] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:43:49.653] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:43:49.814] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:43:49.977] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:43:50.142] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:43:50.307] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:43:50.473] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:43:51.271] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:43:51.483] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:45:02.005] [INFO] main - Main start:  3002
+[2023-03-12T23:45:03.960] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:46:59.343] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:48:47.423] [INFO] main - Main start:  3002
+[2023-03-12T23:49:05.076] [INFO] main - Main start:  3002
+[2023-03-12T23:49:07.755] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-12T23:49:40.480] [INFO] main - Main start:  3002
+[2023-03-12T23:49:43.479] [ERROR] main - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:72:19)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}

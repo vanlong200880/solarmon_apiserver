@@ -40493,3 +40493,929 @@ ORDER BY
   show_child: 1,
   id_employee: 1
 }
+[2023-03-12T23:49:07.840] [INFO] SQLMapperLog - [sqlId:MainProject.getListProjectByEmployee] SELECT
+  p.id,
+  p.hash_id,
+  p.thumbnail,
+  p.address,
+  p.lat,
+  p.lng,
+  p.installed_power,
+  p.installed_power_client,
+  DATE_FORMAT(p.commisioning_date, '%d/%m/%Y') AS commisioning_date,
+  DATE_FORMAT(p.last_updated, '%d/%m/%Y') AS last_updated,
+  DATE_FORMAT(p.installed_date, '%d/%m/%Y') AS installed_date,
+  pd.`name`,
+  pd.site_name,
+  pgd.`name` AS project_group_name,
+  IFNULL(t.config_revenue, 0) AS config_revenue,
+  CASE
+    WHEN k.total_alert > 0 THEN CONCAT(
+      '[',
+      GROUP_CONCAT(
+        JSON_OBJECT(
+          'id',
+          k.id,
+          'thumbnail',
+          k.thumbnail,
+          'name',
+          k.`name`,
+          'total_alert',
+          k.total_alert
+        )
+      ),
+      ']'
+    )
+    ELSE NULL
+  END AS alarms,
+  v.last_updated,
+  y.last_month,
+  y.power_now,
+  y.lifetime,
+  y.energy_today
+FROM
+  project p
+  LEFT JOIN project_detail pd ON pd.id_project = p.id
+  AND pd.id_language = #{id_language}
+  LEFT JOIN project_group pg ON pg.id = p.id_project_group
+  LEFT JOIN project_group_detail pgd ON pgd.id_project_group = pg.id
+  AND pgd.id_language = #{id_language}
+  LEFT JOIN emloyee_project_map epm ON epm.id_project = p.id
+  LEFT JOIN (
+    SELECT
+      pc.id_project,
+      pc.config_revenue
+    FROM
+      project_config pc
+    WHERE
+      NOW() >= pc.start_date
+      AND NOW() <= pc.end_date
+      AND pc.`status` = 1
+    GROUP BY
+      pc.id_project
+  ) t ON t.id_project = p.id
+  LEFT JOIN(
+    SELECT
+      k.id,
+      k.`name`,
+      k.thumbnail,
+      SUM(k.total_alert) AS total_alert,
+      k.id_project
+    FROM(
+        SELECT
+          el.id,
+          COUNT(el.id) AS total_alert,
+          el.thumbnail,
+          eld.`name`,
+          d.id_project
+        FROM
+          alert a
+          LEFT JOIN error e ON e.id = a.id_error
+          LEFT JOIN error_level el ON e.id_error_level = el.id
+          LEFT JOIN error_level_detail eld ON eld.id_error_level = el.id
+          AND eld.id_language = #{id_language}
+          LEFT JOIN device d ON d.id = a.id_device
+        WHERE
+          el.id IN (1, 6)
+          AND a.`status` = 1
+          AND e.`status` = 1
+          AND el.`status` = 1
+        GROUP BY
+          el.id,
+          d.id_project
+        UNION ALL
+        SELECT
+          el.id,
+          COUNT(el.id) AS total_alert,
+          el.thumbnail,
+          eld.`name`,
+          pm.id_project
+        FROM
+          project_map_device_virtual pm
+          LEFT JOIN alert a ON a.id_device = pm.id_device
+          LEFT JOIN error e ON e.id = a.id_error
+          LEFT JOIN error_level el ON e.id_error_level = el.id
+          LEFT JOIN error_level_detail eld ON eld.id_error_level = el.id
+          AND eld.id_language = #{id_language}
+        WHERE
+          el.id IN (1, 6)
+          AND a.`status` = 1
+          AND e.`status` = 1
+          AND el.`status` = 1
+        GROUP BY
+          el.id,
+          pm.id_project
+      ) k
+    GROUP BY
+      k.id,
+      k.id_project
+  ) k ON k.id_project = p.id
+  LEFT JOIN(
+    SELECT
+      d.id_project,
+      IF(
+        SUM(d.power_now) IS NULL
+        OR DATE_FORMAT(NOW(), '%k') >= 19
+        OR DATE_FORMAT(NOW(), '%k') <= 5,
+        0,
+        (SUM(d.power_now) / 1000)
+      ) AS power_now,
+      IF(
+        SUM(d.energy_today) IS NULL,
+        0,
+        (SUM(d.energy_today) / 1000)
+      ) AS energy_today,
+      IF(
+        SUM(d.last_month) IS NULL,
+        0,
+        (SUM(d.last_month) / 1000)
+      ) AS last_month,
+      SUM(d.lifetime) AS lifetime
+    FROM
+      device d
+      LEFT JOIN project p ON p.id = d.id_project
+      LEFT JOIN emloyee_project_map epm ON epm.id_project = p.id
+    WHERE
+      epm.id_employee = #{id_employee} AND d.`status` IN (1,0)  AND p.`status` = 1
+    GROUP BY
+      p.id
+  ) y ON y.id_project = p.id
+  LEFT JOIN (
+    SELECT
+      d.id_project,
+      MAX(dv.time) AS time,
+      FROM_UNIXTIME(MAX(dv.time), '%d/%m/%Y %H:%i') AS last_updated
+    FROM
+      device d
+      LEFT JOIN model_techedge dv ON dv.id_device = d.id
+    WHERE
+      d.id_device_group = 27
+      AND dv.time IS NOT NULL
+    GROUP BY
+      d.id
+    UNION ALL
+    SELECT
+      d.id_project,
+      MAX(dv.time) AS time,
+      FROM_UNIXTIME(MAX(dv.time), '%d/%m/%Y %H:%i') AS last_updated
+    FROM
+      project_map_device_virtual pm
+      LEFT JOIN device d ON d.id = pm.id_device
+      LEFT JOIN model_techedge dv ON dv.id_device = d.id_device
+    WHERE
+      d.id_device_group = 27
+      AND dv.time IS NOT NULL
+    GROUP BY
+      pm.id_device
+  ) v ON v.id_project = p.id
+WHERE
+  epm.id_employee = #{id_employee}
+  AND p.`status` = 1
+  AND pg.`status` = 1
+GROUP BY
+  p.id
+ORDER BY
+  p.menu_order DESC
+LIMIT
+  $ { offset },
+  $ {
+limit
+  }
+[2023-03-12T23:49:07.842] [INFO] SQLMapperLog - param: {
+  mode: null,
+  is_paging: 1,
+  created_by: null,
+  created_date: null,
+  updated_by: null,
+  updated_date: null,
+  is_active: 1,
+  current_row: 0,
+  order_by: null,
+  sort_column: null,
+  max_record: 50,
+  id: null,
+  id_project_group: null,
+  hash_id: null,
+  thumbnail: null,
+  address: null,
+  lat: null,
+  lng: null,
+  installed_power: null,
+  installed_power_client: null,
+  commisioning_date: null,
+  installed_date: null,
+  last_updated: null,
+  status: 1,
+  total_year: 0,
+  year: null,
+  config_revenue: 0,
+  start_date: null,
+  end_date: null,
+  jan: null,
+  feb: null,
+  mar: null,
+  apr: null,
+  may: null,
+  jun: null,
+  jul: null,
+  aug: null,
+  sep: null,
+  oct: null,
+  nov: null,
+  dec: null,
+  yearly_egrade_default: null,
+  yearly_egrade_two: null,
+  config_yi: 0,
+  config_po: 0,
+  total_loss_factor: 1,
+  config_yi1: 0,
+  config_po1: 0,
+  total_loss_factor1: 1,
+  menu_order: 1,
+  action: 'getListProjectByEmployee',
+  lang: 'vi',
+  lang_default: 'vi'
+}
+[2023-03-12T23:49:07.864] [ERROR] SQLMapperLog - [Arguments] {
+  '0': Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN project_group pg ON pg.id = p.id_project_group
+    LEFT JOIN project_group_de' at line 40
+      at Query.Sequence._packetToError (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+      at Query.ErrorPacket (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+      at Protocol._parsePacket (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+      at Parser._parsePacket (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/Parser.js:433:10)
+      at Parser.write (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/Parser.js:43:10)
+      at Protocol.write (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+      at Socket.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/Connection.js:88:28)
+      at Socket.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/Connection.js:526:10)
+      at Socket.emit (events.js:400:28)
+      at Socket.emit (domain.js:475:12)
+      --------------------
+      at Protocol._enqueue (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+      at PoolConnection.query (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/Connection.js:198:25)
+      at /Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/DBManagers/MyBatis/mybatis-node/src/No.js:284:32
+      at Context.getConnected (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/DBManagers/MyBatis/mybatis-node/src/Context.js:55:24)
+      at TemplateMapManager.connection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/DBManagers/MyBatis/mybatis-node/src/No.js:372:39)
+      at /Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/DBManagers/MyBatis/mybatis-node/src/No.js:283:22
+      at new Promise (<anonymous>)
+      at TemplateMapManager.selectList (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/DBManagers/MyBatis/mybatis-node/src/No.js:262:20)
+      at DBManager.queryForList (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/DBManagers/MyBatis/DBManager.js:72:26)
+      at /Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/services/MainProjectService.js:84:30 {
+    code: 'ER_PARSE_ERROR',
+    errno: 1064,
+    sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN project_group pg ON pg.id = p.id_project_group\n" +
+      "  LEFT JOIN project_group_de' at line 40",
+    sqlState: '42000',
+    index: 0,
+    sql: 'SELECT\n' +
+      '  p.id,\n' +
+      '  p.hash_id,\n' +
+      '  p.thumbnail,\n' +
+      '  p.address,\n' +
+      '  p.lat,\n' +
+      '  p.lng,\n' +
+      '  p.installed_power,\n' +
+      '  p.installed_power_client,\n' +
+      "  DATE_FORMAT(p.commisioning_date, '%d/%m/%Y') AS commisioning_date,\n" +
+      "  DATE_FORMAT(p.last_updated, '%d/%m/%Y') AS last_updated,\n" +
+      "  DATE_FORMAT(p.installed_date, '%d/%m/%Y') AS installed_date,\n" +
+      '  pd.`name`,\n' +
+      '  pd.site_name,\n' +
+      '  pgd.`name` AS project_group_name,\n' +
+      '  IFNULL(t.config_revenue, 0) AS config_revenue,\n' +
+      '  CASE\n' +
+      '    WHEN k.total_alert > 0 THEN CONCAT(\n' +
+      "      '[',\n" +
+      '      GROUP_CONCAT(\n' +
+      '        JSON_OBJECT(\n' +
+      "          'id',\n" +
+      '          k.id,\n' +
+      "          'thumbnail',\n" +
+      '          k.thumbnail,\n' +
+      "          'name',\n" +
+      '          k.`name`,\n' +
+      "          'total_alert',\n" +
+      '          k.total_alert\n' +
+      '        )\n' +
+      '      ),\n' +
+      "      ']'\n" +
+      '    )\n' +
+      '    ELSE NULL\n' +
+      '  END AS alarms,\n' +
+      '  v.last_updated,\n' +
+      '  y.last_month,\n' +
+      '  y.power_now,\n' +
+      '  y.lifetime,\n' +
+      '  y.energy_today\n' +
+      'FROM\n' +
+      '  project p\n' +
+      '  LEFT JOIN project_detail pd ON pd.id_project = p.id\n' +
+      '  AND pd.id_language = #{id_language}\n' +
+      '  LEFT JOIN project_group pg ON pg.id = p.id_project_group\n' +
+      '  LEFT JOIN project_group_detail pgd ON pgd.id_project_group = pg.id\n' +
+      '  AND pgd.id_language = #{id_language}\n' +
+      '  LEFT JOIN emloyee_project_map epm ON epm.id_project = p.id\n' +
+      '  LEFT JOIN (\n' +
+      '    SELECT\n' +
+      '      pc.id_project,\n' +
+      '      pc.config_revenue\n' +
+      '    FROM\n' +
+      '      project_config pc\n' +
+      '    WHERE\n' +
+      '      NOW() >= pc.start_date\n' +
+      '      AND NOW() <= pc.end_date\n' +
+      '      AND pc.`status` = 1\n' +
+      '    GROUP BY\n' +
+      '      pc.id_project\n' +
+      '  ) t ON t.id_project = p.id\n' +
+      '  LEFT JOIN(\n' +
+      '    SELECT\n' +
+      '      k.id,\n' +
+      '      k.`name`,\n' +
+      '      k.thumbnail,\n' +
+      '      SUM(k.total_alert) AS total_alert,\n' +
+      '      k.id_project\n' +
+      '    FROM(\n' +
+      '        SELECT\n' +
+      '          el.id,\n' +
+      '          COUNT(el.id) AS total_alert,\n' +
+      '          el.thumbnail,\n' +
+      '          eld.`name`,\n' +
+      '          d.id_project\n' +
+      '        FROM\n' +
+      '          alert a\n' +
+      '          LEFT JOIN error e ON e.id = a.id_error\n' +
+      '          LEFT JOIN error_level el ON e.id_error_level = el.id\n' +
+      '          LEFT JOIN error_level_detail eld ON eld.id_error_level = el.id\n' +
+      '          AND eld.id_language = #{id_language}\n' +
+      '          LEFT JOIN device d ON d.id = a.id_device\n' +
+      '        WHERE\n' +
+      '          el.id IN (1, 6)\n' +
+      '          AND a.`status` = 1\n' +
+      '          AND e.`status` = 1\n' +
+      '          AND el.`status` = 1\n' +
+      '        GROUP BY\n' +
+      '          el.id,\n' +
+      '          d.id_project\n' +
+      '        UNION ALL\n' +
+      '        SELECT\n' +
+      '          el.id,\n' +
+      '          COUNT(el.id) AS total_alert,\n' +
+      '          el.thumbnail,\n' +
+      '          eld.`name`,\n' +
+      '          pm.id_project\n' +
+      '        FROM\n' +
+      '          project_map_device_virtual pm\n' +
+      '          LEFT JOIN alert a ON a.id_device = pm.id_device\n' +
+      '          LEFT JOIN error e ON e.id = a.id_error\n' +
+      '          LEFT JOIN error_level el ON e.id_error_level = el.id\n' +
+      '          LEFT JOIN error_level_detail eld ON eld.id_error_level = el.id\n' +
+      '          AND eld.id_language = #{id_language}\n' +
+      '        WHERE\n' +
+      '          el.id IN (1, 6)\n' +
+      '          AND a.`status` = 1\n' +
+      '          AND e.`status` = 1\n' +
+      '          AND el.`status` = 1\n' +
+      '        GROUP BY\n' +
+      '          el.id,\n' +
+      '          pm.id_project\n' +
+      '      ) k\n' +
+      '    GROUP BY\n' +
+      '      k.id,\n' +
+      '      k.id_project\n' +
+      '  ) k ON k.id_project = p.id\n' +
+      '  LEFT JOIN(\n' +
+      '    SELECT\n' +
+      '      d.id_project,\n' +
+      '      IF(\n' +
+      '        SUM(d.power_now) IS NULL\n' +
+      "        OR DATE_FORMAT(NOW(), '%k') >= 19\n" +
+      "        OR DATE_FORMAT(NOW(), '%k') <= 5,\n" +
+      '        0,\n' +
+      '        (SUM(d.power_now) / 1000)\n' +
+      '      ) AS power_now,\n' +
+      '      IF(\n' +
+      '        SUM(d.energy_today) IS NULL,\n' +
+      '        0,\n' +
+      '        (SUM(d.energy_today) / 1000)\n' +
+      '      ) AS energy_today,\n' +
+      '      IF(\n' +
+      '        SUM(d.last_month) IS NULL,\n' +
+      '        0,\n' +
+      '        (SUM(d.last_month) / 1000)\n' +
+      '      ) AS last_month,\n' +
+      '      SUM(d.lifetime) AS lifetime\n' +
+      '    FROM\n' +
+      '      device d\n' +
+      '      LEFT JOIN project p ON p.id = d.id_project\n' +
+      '      LEFT JOIN emloyee_project_map epm ON epm.id_project = p.id\n' +
+      '    WHERE\n' +
+      '      epm.id_employee = #{id_employee} AND d.`status` IN (1,0)  AND p.`status` = 1\n' +
+      '    GROUP BY\n' +
+      '      p.id\n' +
+      '  ) y ON y.id_project = p.id\n' +
+      '  LEFT JOIN (\n' +
+      '    SELECT\n' +
+      '      d.id_project,\n' +
+      '      MAX(dv.time) AS time,\n' +
+      "      FROM_UNIXTIME(MAX(dv.time), '%d/%m/%Y %H:%i') AS last_updated\n" +
+      '    FROM\n' +
+      '      device d\n' +
+      '      LEFT JOIN model_techedge dv ON dv.id_device = d.id\n' +
+      '    WHERE\n' +
+      '      d.id_device_group = 27\n' +
+      '      AND dv.time IS NOT NULL\n' +
+      '    GROUP BY\n' +
+      '      d.id\n' +
+      '    UNION ALL\n' +
+      '    SELECT\n' +
+      '      d.id_project,\n' +
+      '      MAX(dv.time) AS time,\n' +
+      "      FROM_UNIXTIME(MAX(dv.time), '%d/%m/%Y %H:%i') AS last_updated\n" +
+      '    FROM\n' +
+      '      project_map_device_virtual pm\n' +
+      '      LEFT JOIN device d ON d.id = pm.id_device\n' +
+      '      LEFT JOIN model_techedge dv ON dv.id_device = d.id_device\n' +
+      '    WHERE\n' +
+      '      d.id_device_group = 27\n' +
+      '      AND dv.time IS NOT NULL\n' +
+      '    GROUP BY\n' +
+      '      pm.id_device\n' +
+      '  ) v ON v.id_project = p.id\n' +
+      'WHERE\n' +
+      '  epm.id_employee = #{id_employee}\n' +
+      '  AND p.`status` = 1\n' +
+      '  AND pg.`status` = 1\n' +
+      'GROUP BY\n' +
+      '  p.id\n' +
+      'ORDER BY\n' +
+      '  p.menu_order DESC\n' +
+      'LIMIT\n' +
+      '  $ { offset },\n' +
+      '  $ {\n' +
+      'limit\n' +
+      '  }'
+  }
+}
+[2023-03-12T23:49:43.615] [INFO] SQLMapperLog - [sqlId:MainProject.getListProjectByEmployee] SELECT
+  p.id,
+  p.hash_id,
+  p.thumbnail,
+  p.address,
+  p.lat,
+  p.lng,
+  p.installed_power,
+  p.installed_power_client,
+  DATE_FORMAT(p.commisioning_date, '%d/%m/%Y') AS commisioning_date,
+  DATE_FORMAT(p.last_updated, '%d/%m/%Y') AS last_updated,
+  DATE_FORMAT(p.installed_date, '%d/%m/%Y') AS installed_date,
+  pd.`name`,
+  pd.site_name,
+  pgd.`name` AS project_group_name,
+  IFNULL(t.config_revenue, 0) AS config_revenue,
+  CASE
+    WHEN k.total_alert > 0 THEN CONCAT(
+      '[',
+      GROUP_CONCAT(
+        JSON_OBJECT(
+          'id',
+          k.id,
+          'thumbnail',
+          k.thumbnail,
+          'name',
+          k.`name`,
+          'total_alert',
+          k.total_alert
+        )
+      ),
+      ']'
+    )
+    ELSE NULL
+  END AS alarms,
+  v.last_updated,
+  y.last_month,
+  y.power_now,
+  y.lifetime,
+  y.energy_today
+FROM
+  project p
+  LEFT JOIN project_detail pd ON pd.id_project = p.id
+  AND pd.id_language = #{id_language}
+  LEFT JOIN project_group pg ON pg.id = p.id_project_group
+  LEFT JOIN project_group_detail pgd ON pgd.id_project_group = pg.id
+  AND pgd.id_language = #{id_language}
+  LEFT JOIN emloyee_project_map epm ON epm.id_project = p.id
+  LEFT JOIN (
+    SELECT
+      pc.id_project,
+      pc.config_revenue
+    FROM
+      project_config pc
+    WHERE
+      NOW() >= pc.start_date
+      AND NOW() <= pc.end_date
+      AND pc.`status` = 1
+    GROUP BY
+      pc.id_project
+  ) t ON t.id_project = p.id
+  LEFT JOIN(
+    SELECT
+      k.id,
+      k.`name`,
+      k.thumbnail,
+      SUM(k.total_alert) AS total_alert,
+      k.id_project
+    FROM(
+        SELECT
+          el.id,
+          COUNT(el.id) AS total_alert,
+          el.thumbnail,
+          eld.`name`,
+          d.id_project
+        FROM
+          alert a
+          LEFT JOIN error e ON e.id = a.id_error
+          LEFT JOIN error_level el ON e.id_error_level = el.id
+          LEFT JOIN error_level_detail eld ON eld.id_error_level = el.id
+          AND eld.id_language = #{id_language}
+          LEFT JOIN device d ON d.id = a.id_device
+        WHERE
+          el.id IN (1, 6)
+          AND a.`status` = 1
+          AND e.`status` = 1
+          AND el.`status` = 1
+        GROUP BY
+          el.id,
+          d.id_project
+        UNION ALL
+        SELECT
+          el.id,
+          COUNT(el.id) AS total_alert,
+          el.thumbnail,
+          eld.`name`,
+          pm.id_project
+        FROM
+          project_map_device_virtual pm
+          LEFT JOIN alert a ON a.id_device = pm.id_device
+          LEFT JOIN error e ON e.id = a.id_error
+          LEFT JOIN error_level el ON e.id_error_level = el.id
+          LEFT JOIN error_level_detail eld ON eld.id_error_level = el.id
+          AND eld.id_language = #{id_language}
+        WHERE
+          el.id IN (1, 6)
+          AND a.`status` = 1
+          AND e.`status` = 1
+          AND el.`status` = 1
+        GROUP BY
+          el.id,
+          pm.id_project
+      ) k
+    GROUP BY
+      k.id,
+      k.id_project
+  ) k ON k.id_project = p.id
+  LEFT JOIN(
+    SELECT
+      d.id_project,
+      IF(
+        SUM(d.power_now) IS NULL
+        OR DATE_FORMAT(NOW(), '%k') >= 19
+        OR DATE_FORMAT(NOW(), '%k') <= 5,
+        0,
+        (SUM(d.power_now) / 1000)
+      ) AS power_now,
+      IF(
+        SUM(d.energy_today) IS NULL,
+        0,
+        (SUM(d.energy_today) / 1000)
+      ) AS energy_today,
+      IF(
+        SUM(d.last_month) IS NULL,
+        0,
+        (SUM(d.last_month) / 1000)
+      ) AS last_month,
+      SUM(d.lifetime) AS lifetime
+    FROM
+      device d
+      LEFT JOIN project p ON p.id = d.id_project
+      LEFT JOIN emloyee_project_map epm ON epm.id_project = p.id
+    WHERE
+      epm.id_employee = #{id_employee} AND d.`status` IN (1,0)  AND p.`status` = 1
+    GROUP BY
+      p.id
+  ) y ON y.id_project = p.id
+  LEFT JOIN (
+    SELECT
+      d.id_project,
+      MAX(dv.time) AS time,
+      FROM_UNIXTIME(MAX(dv.time), '%d/%m/%Y %H:%i') AS last_updated
+    FROM
+      device d
+      LEFT JOIN model_techedge dv ON dv.id_device = d.id
+    WHERE
+      d.id_device_group = 27
+      AND dv.time IS NOT NULL
+    GROUP BY
+      d.id
+    UNION ALL
+    SELECT
+      d.id_project,
+      MAX(dv.time) AS time,
+      FROM_UNIXTIME(MAX(dv.time), '%d/%m/%Y %H:%i') AS last_updated
+    FROM
+      project_map_device_virtual pm
+      LEFT JOIN device d ON d.id = pm.id_device
+      LEFT JOIN model_techedge dv ON dv.id_device = d.id_device
+    WHERE
+      d.id_device_group = 27
+      AND dv.time IS NOT NULL
+    GROUP BY
+      pm.id_device
+  ) v ON v.id_project = p.id
+WHERE
+  epm.id_employee = #{id_employee}
+  AND p.`status` = 1
+  AND pg.`status` = 1
+GROUP BY
+  p.id
+ORDER BY
+  p.menu_order DESC
+LIMIT
+  $ { offset },
+  $ {
+limit
+  }
+[2023-03-12T23:49:43.617] [INFO] SQLMapperLog - param: {
+  mode: null,
+  is_paging: 1,
+  created_by: null,
+  created_date: null,
+  updated_by: null,
+  updated_date: null,
+  is_active: 1,
+  current_row: 0,
+  order_by: null,
+  sort_column: null,
+  max_record: 50,
+  id: null,
+  id_project_group: null,
+  hash_id: null,
+  thumbnail: null,
+  address: null,
+  lat: null,
+  lng: null,
+  installed_power: null,
+  installed_power_client: null,
+  commisioning_date: null,
+  installed_date: null,
+  last_updated: null,
+  status: 1,
+  total_year: 0,
+  year: null,
+  config_revenue: 0,
+  start_date: null,
+  end_date: null,
+  jan: null,
+  feb: null,
+  mar: null,
+  apr: null,
+  may: null,
+  jun: null,
+  jul: null,
+  aug: null,
+  sep: null,
+  oct: null,
+  nov: null,
+  dec: null,
+  yearly_egrade_default: null,
+  yearly_egrade_two: null,
+  config_yi: 0,
+  config_po: 0,
+  total_loss_factor: 1,
+  config_yi1: 0,
+  config_po1: 0,
+  total_loss_factor1: 1,
+  menu_order: 1,
+  action: 'getListProjectByEmployee',
+  lang: 'vi',
+  lang_default: 'vi'
+}
+[2023-03-12T23:49:43.626] [ERROR] SQLMapperLog - [Arguments] {
+  '0': Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN project_group pg ON pg.id = p.id_project_group
+    LEFT JOIN project_group_de' at line 40
+      at Query.Sequence._packetToError (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+      at Query.ErrorPacket (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+      at Protocol._parsePacket (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+      at Parser._parsePacket (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/Parser.js:433:10)
+      at Parser.write (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/Parser.js:43:10)
+      at Protocol.write (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+      at Socket.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/Connection.js:88:28)
+      at Socket.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/Connection.js:526:10)
+      at Socket.emit (events.js:400:28)
+      at Socket.emit (domain.js:475:12)
+      --------------------
+      at Protocol._enqueue (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+      at PoolConnection.query (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/mysql/lib/Connection.js:198:25)
+      at /Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/DBManagers/MyBatis/mybatis-node/src/No.js:284:32
+      at Context.getConnected (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/DBManagers/MyBatis/mybatis-node/src/Context.js:55:24)
+      at TemplateMapManager.connection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/DBManagers/MyBatis/mybatis-node/src/No.js:372:39)
+      at /Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/DBManagers/MyBatis/mybatis-node/src/No.js:283:22
+      at new Promise (<anonymous>)
+      at TemplateMapManager.selectList (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/DBManagers/MyBatis/mybatis-node/src/No.js:262:20)
+      at DBManager.queryForList (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/DBManagers/MyBatis/DBManager.js:72:26)
+      at /Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/services/MainProjectService.js:84:30 {
+    code: 'ER_PARSE_ERROR',
+    errno: 1064,
+    sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'JOIN project_group pg ON pg.id = p.id_project_group\n" +
+      "  LEFT JOIN project_group_de' at line 40",
+    sqlState: '42000',
+    index: 0,
+    sql: 'SELECT\n' +
+      '  p.id,\n' +
+      '  p.hash_id,\n' +
+      '  p.thumbnail,\n' +
+      '  p.address,\n' +
+      '  p.lat,\n' +
+      '  p.lng,\n' +
+      '  p.installed_power,\n' +
+      '  p.installed_power_client,\n' +
+      "  DATE_FORMAT(p.commisioning_date, '%d/%m/%Y') AS commisioning_date,\n" +
+      "  DATE_FORMAT(p.last_updated, '%d/%m/%Y') AS last_updated,\n" +
+      "  DATE_FORMAT(p.installed_date, '%d/%m/%Y') AS installed_date,\n" +
+      '  pd.`name`,\n' +
+      '  pd.site_name,\n' +
+      '  pgd.`name` AS project_group_name,\n' +
+      '  IFNULL(t.config_revenue, 0) AS config_revenue,\n' +
+      '  CASE\n' +
+      '    WHEN k.total_alert > 0 THEN CONCAT(\n' +
+      "      '[',\n" +
+      '      GROUP_CONCAT(\n' +
+      '        JSON_OBJECT(\n' +
+      "          'id',\n" +
+      '          k.id,\n' +
+      "          'thumbnail',\n" +
+      '          k.thumbnail,\n' +
+      "          'name',\n" +
+      '          k.`name`,\n' +
+      "          'total_alert',\n" +
+      '          k.total_alert\n' +
+      '        )\n' +
+      '      ),\n' +
+      "      ']'\n" +
+      '    )\n' +
+      '    ELSE NULL\n' +
+      '  END AS alarms,\n' +
+      '  v.last_updated,\n' +
+      '  y.last_month,\n' +
+      '  y.power_now,\n' +
+      '  y.lifetime,\n' +
+      '  y.energy_today\n' +
+      'FROM\n' +
+      '  project p\n' +
+      '  LEFT JOIN project_detail pd ON pd.id_project = p.id\n' +
+      '  AND pd.id_language = #{id_language}\n' +
+      '  LEFT JOIN project_group pg ON pg.id = p.id_project_group\n' +
+      '  LEFT JOIN project_group_detail pgd ON pgd.id_project_group = pg.id\n' +
+      '  AND pgd.id_language = #{id_language}\n' +
+      '  LEFT JOIN emloyee_project_map epm ON epm.id_project = p.id\n' +
+      '  LEFT JOIN (\n' +
+      '    SELECT\n' +
+      '      pc.id_project,\n' +
+      '      pc.config_revenue\n' +
+      '    FROM\n' +
+      '      project_config pc\n' +
+      '    WHERE\n' +
+      '      NOW() >= pc.start_date\n' +
+      '      AND NOW() <= pc.end_date\n' +
+      '      AND pc.`status` = 1\n' +
+      '    GROUP BY\n' +
+      '      pc.id_project\n' +
+      '  ) t ON t.id_project = p.id\n' +
+      '  LEFT JOIN(\n' +
+      '    SELECT\n' +
+      '      k.id,\n' +
+      '      k.`name`,\n' +
+      '      k.thumbnail,\n' +
+      '      SUM(k.total_alert) AS total_alert,\n' +
+      '      k.id_project\n' +
+      '    FROM(\n' +
+      '        SELECT\n' +
+      '          el.id,\n' +
+      '          COUNT(el.id) AS total_alert,\n' +
+      '          el.thumbnail,\n' +
+      '          eld.`name`,\n' +
+      '          d.id_project\n' +
+      '        FROM\n' +
+      '          alert a\n' +
+      '          LEFT JOIN error e ON e.id = a.id_error\n' +
+      '          LEFT JOIN error_level el ON e.id_error_level = el.id\n' +
+      '          LEFT JOIN error_level_detail eld ON eld.id_error_level = el.id\n' +
+      '          AND eld.id_language = #{id_language}\n' +
+      '          LEFT JOIN device d ON d.id = a.id_device\n' +
+      '        WHERE\n' +
+      '          el.id IN (1, 6)\n' +
+      '          AND a.`status` = 1\n' +
+      '          AND e.`status` = 1\n' +
+      '          AND el.`status` = 1\n' +
+      '        GROUP BY\n' +
+      '          el.id,\n' +
+      '          d.id_project\n' +
+      '        UNION ALL\n' +
+      '        SELECT\n' +
+      '          el.id,\n' +
+      '          COUNT(el.id) AS total_alert,\n' +
+      '          el.thumbnail,\n' +
+      '          eld.`name`,\n' +
+      '          pm.id_project\n' +
+      '        FROM\n' +
+      '          project_map_device_virtual pm\n' +
+      '          LEFT JOIN alert a ON a.id_device = pm.id_device\n' +
+      '          LEFT JOIN error e ON e.id = a.id_error\n' +
+      '          LEFT JOIN error_level el ON e.id_error_level = el.id\n' +
+      '          LEFT JOIN error_level_detail eld ON eld.id_error_level = el.id\n' +
+      '          AND eld.id_language = #{id_language}\n' +
+      '        WHERE\n' +
+      '          el.id IN (1, 6)\n' +
+      '          AND a.`status` = 1\n' +
+      '          AND e.`status` = 1\n' +
+      '          AND el.`status` = 1\n' +
+      '        GROUP BY\n' +
+      '          el.id,\n' +
+      '          pm.id_project\n' +
+      '      ) k\n' +
+      '    GROUP BY\n' +
+      '      k.id,\n' +
+      '      k.id_project\n' +
+      '  ) k ON k.id_project = p.id\n' +
+      '  LEFT JOIN(\n' +
+      '    SELECT\n' +
+      '      d.id_project,\n' +
+      '      IF(\n' +
+      '        SUM(d.power_now) IS NULL\n' +
+      "        OR DATE_FORMAT(NOW(), '%k') >= 19\n" +
+      "        OR DATE_FORMAT(NOW(), '%k') <= 5,\n" +
+      '        0,\n' +
+      '        (SUM(d.power_now) / 1000)\n' +
+      '      ) AS power_now,\n' +
+      '      IF(\n' +
+      '        SUM(d.energy_today) IS NULL,\n' +
+      '        0,\n' +
+      '        (SUM(d.energy_today) / 1000)\n' +
+      '      ) AS energy_today,\n' +
+      '      IF(\n' +
+      '        SUM(d.last_month) IS NULL,\n' +
+      '        0,\n' +
+      '        (SUM(d.last_month) / 1000)\n' +
+      '      ) AS last_month,\n' +
+      '      SUM(d.lifetime) AS lifetime\n' +
+      '    FROM\n' +
+      '      device d\n' +
+      '      LEFT JOIN project p ON p.id = d.id_project\n' +
+      '      LEFT JOIN emloyee_project_map epm ON epm.id_project = p.id\n' +
+      '    WHERE\n' +
+      '      epm.id_employee = #{id_employee} AND d.`status` IN (1,0)  AND p.`status` = 1\n' +
+      '    GROUP BY\n' +
+      '      p.id\n' +
+      '  ) y ON y.id_project = p.id\n' +
+      '  LEFT JOIN (\n' +
+      '    SELECT\n' +
+      '      d.id_project,\n' +
+      '      MAX(dv.time) AS time,\n' +
+      "      FROM_UNIXTIME(MAX(dv.time), '%d/%m/%Y %H:%i') AS last_updated\n" +
+      '    FROM\n' +
+      '      device d\n' +
+      '      LEFT JOIN model_techedge dv ON dv.id_device = d.id\n' +
+      '    WHERE\n' +
+      '      d.id_device_group = 27\n' +
+      '      AND dv.time IS NOT NULL\n' +
+      '    GROUP BY\n' +
+      '      d.id\n' +
+      '    UNION ALL\n' +
+      '    SELECT\n' +
+      '      d.id_project,\n' +
+      '      MAX(dv.time) AS time,\n' +
+      "      FROM_UNIXTIME(MAX(dv.time), '%d/%m/%Y %H:%i') AS last_updated\n" +
+      '    FROM\n' +
+      '      project_map_device_virtual pm\n' +
+      '      LEFT JOIN device d ON d.id = pm.id_device\n' +
+      '      LEFT JOIN model_techedge dv ON dv.id_device = d.id_device\n' +
+      '    WHERE\n' +
+      '      d.id_device_group = 27\n' +
+      '      AND dv.time IS NOT NULL\n' +
+      '    GROUP BY\n' +
+      '      pm.id_device\n' +
+      '  ) v ON v.id_project = p.id\n' +
+      'WHERE\n' +
+      '  epm.id_employee = #{id_employee}\n' +
+      '  AND p.`status` = 1\n' +
+      '  AND pg.`status` = 1\n' +
+      'GROUP BY\n' +
+      '  p.id\n' +
+      'ORDER BY\n' +
+      '  p.menu_order DESC\n' +
+      'LIMIT\n' +
+      '  $ { offset },\n' +
+      '  $ {\n' +
+      'limit\n' +
+      '  }'
+  }
+}
