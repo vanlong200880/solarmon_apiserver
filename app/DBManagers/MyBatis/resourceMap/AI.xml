@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="AI">
+
+	<select id="getListDevice">
+			SELECT
+				d.id,
+				d.id_device,
+				d.`name`,
+				d.model,
+				d.serial_number,
+				d.id_project,
+				pd.`name` AS project_name,
+				dg.table_name
+				
+			FROM
+				device d
+				LEFT JOIN device_group dg ON dg.id = d.id_device_group
+				LEFT JOIN project p ON p.id = d.id_project
+				LEFT JOIN project_detail pd ON pd.id_project = p.id AND pd.id_language = 1
+			WHERE p.`status` = 1 AND d.`status` = 1
+		
+			<if test="type == 'inverter'">
+				AND  d.id_device_type IN (1)
+			</if>
+			<if test="type == 'sensor'">
+				AND  d.id_device_type IN (2)
+			</if>
+			<if test="type == 'meter'">
+				AND  d.id_device_type IN (4)
+			</if>
+			<if test="type != 'inverter-and-meter'">
+				AND  d.id_device_type IN (1,4)
+			</if>
+
+			
+		GROUP BY d.id
+		<if test="is_paging == 1">
+			LIMIT ${offset}, ${limit}
+		</if>
+	</select>
+
+
+	<select id="getListDeviceSize">
+		SELECT
+			count(d.id) totalRow
+			FROM
+				device d
+				LEFT JOIN project p ON p.id = d.id_project
+				LEFT JOIN project_detail pd ON pd.id_project = p.id AND pd.id_language = 1
+			WHERE p.`status` = 1 AND d.`status` = 1
+
+			<if test="type == 'inverter'">
+				AND  d.id_device_type IN (1)
+			</if>
+			<if test="type == 'sensor'">
+				AND  d.id_device_type IN (2)
+			</if>
+			<if test="type == 'meter'">
+				AND  d.id_device_type IN (4)
+			</if>
+			<if test="type == 'inverter-and-meter'">
+				AND  d.id_device_type IN (1,4)
+			</if>
+	</select>
+
+
+	<select id="getDataDeviceToday">
+		SELECT
+			FROM_UNIXTIME(dv.time, '%Y-%m-%d %H:%i') AS time_format,
+			d.id_device AS id_device_alias,
+			dv.*
+			
+		FROM
+			${table_name} dv
+			LEFT JOIN device d ON d.id = dv.id_device 
+		WHERE
+			d.id_device = #{id_device} AND FROM_UNIXTIME(dv.time, '%Y-%m-%d') = DATE_FORMAT( NOW(), '%Y-%m-%d');
+	</select>
+
+
+
+
+	<!-- <insert id="insertAI" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO `alert_state`(
+			`status`,
+			`created_date`,
+			`created_by`
+		)VALUES(
+			#{status},
+			NOW(),
+			#{created_by}
+		);
+	</insert>
+
+
+
+
+	<insert id="insertAIDetail" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO `alert_state_detail` 
+		(
+			`id_alert_state`, 
+			`id_language`, 
+			`name`,
+			`description`
+		)
+		VALUES
+		<foreach collection="dataDetail" item="item" index="index" separator=",">
+				(
+					#{item.id_alert_state}, 
+					#{item.id_language},
+					#{item.name}, 
+					#{item.description}
+				)
+		</foreach>
+	</insert>
+
+	
+
+	<update id="updateStatus">
+		UPDATE `alert_state` 
+			SET status = #{status}
+			WHERE id = #{id}
+	</update>
+
+	<select id="getDetail">
+		SELECT
+			p.`id`,
+			p.`status`
+		FROM `alert_state` p
+		WHERE p.id = #{id};
+
+		SELECT
+			pd.id_alert_state,
+			pd.`id_language`,
+			pd.`name`,
+			pd.`description`,
+			l.iso_code,
+			l.is_default
+		FROM alert_state_detail pd
+		LEFT JOIN `language` l ON l.id = pd.id_language
+		WHERE pd.id_alert_state = #{id} GROUP BY l.id ORDER BY l.is_default DESC;
+	</select>
+
+
+	<delete id="deleteAIDetail">
+		DELETE FROM `alert_state_detail`
+		WHERE id_alert_state = #{id}
+	</delete>
+
+	
+
+	<update id="updateAI">
+		UPDATE `alert_state`
+		SET
+			status = #{status},
+			updated_date = NOW(),
+			updated_by = #{updated_by}
+		WHERE id = #{id}
+	</update>
+
+
+	<update id="delete">
+		UPDATE `alert_state`
+		SET
+			status = #{status},
+			updated_date = NOW(),
+			updated_by = #{updated_by}
+		WHERE
+			id = #{id}
+	</update>
+
+
+	<select id="getDropDownList">
+		SELECT
+			p.id,
+			pd.`name`,
+			pd.`name` AS label,
+			p.id AS `value`
+		FROM
+			`alert_state` AS p
+			LEFT JOIN alert_state_detail pd ON pd.id_alert_state = p.id 
+		WHERE pd.id_language = #{id_language} AND p.`status` = 1
+		ORDER BY
+			p.`id` ASC
+	</select> -->
+
+</mapper>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ClientConfig">
+	<select id="getListAllDeviceByProject">
+		SELECT
+			d.id,
+			d.id_device,
+			d.`name`,
+			d.model,
+			d.serial_number,
+			p.installed_power,
+			p.installed_power_client,
+			0 AS is_checked,
+			d.id_device_group,
+			d.id_device_type
+		FROM
+			device d
+			LEFT JOIN project p ON p.id = d.id_project 
+		WHERE
+			p.`status` = 1 
+			AND d.`status` = 1 AND p.hash_id = #{hash_id}
+	</select>
+
+
+	<select id="getDeviceDetail">
+		SELECT
+			d.*
+		FROM `device` d
+		WHERE d.id = #{id} LIMIT 1;
+	</select>
+
+	<update id="updateDevice">
+		UPDATE device
+		SET
+			dc_size = #{dc_size},
+			id_project = #{id_project},
+			poa_irradiance = #{poa_irradiance},
+			panel_temperature = #{panel_temperature},
+			`max_ac_output` = #{max_ac_output},
+			`sd_time_threshold` = #{sd_time_threshold},
+			`sd_sunrise_sunset` = #{sd_sunrise_sunset},
+			`zg_time_threshold` = #{zg_time_threshold},
+			`zg_sunrise_sunset` = #{zg_sunrise_sunset},
+			pi_time_threshold = #{pi_time_threshold},
+			pi_sunrise_sunset = #{pi_sunrise_sunset},
+			temperature_coefficient = #{temperature_coefficient},
+			system_losses = #{system_losses},
+			inverter_efficiency = #{inverter_efficiency},
+			pi_index_value = #{pi_index_value},
+			enable_system_disconnect = #{enable_system_disconnect},
+			enable_zeo_generation = #{enable_zeo_generation},
+			enable_device_faults = #{enable_device_faults},
+			enable_string_performance = #{enable_string_performance},
+			enable_performance_index = #{enable_performance_index},
+			sp_ratio = #{sp_ratio},
+			sp_time_threshold = #{sp_time_threshold},
+			sp_dc_current_threshold = #{sp_dc_current_threshold},
+			sp_sunrise_sunset = #{sp_sunrise_sunset},
+			dc_current_string01 = #{dc_current_string01},
+			dc_current_string02 = #{dc_current_string02},
+			dc_current_string03 = #{dc_current_string03},
+			dc_current_string04 = #{dc_current_string04},
+			dc_current_string05 = #{dc_current_string05},
+			dc_current_string06 = #{dc_current_string06},
+			dc_current_string07 = #{dc_current_string07},
+			dc_current_string08 = #{dc_current_string08},
+			dc_current_string09 = #{dc_current_string09},
+			dc_current_string10 = #{dc_current_string10},
+			dc_current_string11 = #{dc_current_string11},
+			dc_current_string12 = #{dc_current_string12},
+			dc_current_string13 = #{dc_current_string13},
+			dc_current_string14 = #{dc_current_string14},
+			dc_current_string15 = #{dc_current_string15},
+			dc_current_string16 = #{dc_current_string16},
+			dc_current_string17 = #{dc_current_string17},
+			dc_current_string18 = #{dc_current_string18},
+			dc_current_string19 = #{dc_current_string19},
+			dc_current_string20 = #{dc_current_string20},
+			dc_current_string21 = #{dc_current_string21},
+			dc_current_string22 = #{dc_current_string22},
+			dc_current_string23 = #{dc_current_string23},
+			dc_current_string24 = #{dc_current_string24},
+			sp_type = #{sp_type}
+		WHERE id = #{id}
+	</update>
+</mapper>
+
+
+

@@ -1,0 +1,13 @@
+version: '1.0'
+services:
+  solarmon-apiserver:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    # ports:
+    #   - "3001:3001"
+    # volumes:
+    #   - ./src:/app/src
+    # environment:
+    #   - REACT_APP_NAME=solarmonapiserver
+    #   - CHOKIDAR_USEPOLLING=true

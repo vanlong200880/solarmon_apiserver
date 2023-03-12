@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BatchJob">
+
+	
+	
+	<select id="getAllDevice">
+		SELECT
+			d.id,
+			d.`name`,
+			d.id_device,
+			dg.table_name
+		FROM
+			device d 
+			LEFT JOIN device_group dg ON dg.id = d.id_device_group
+		WHERE
+			d.`status` = 1 
+			<if test="type == 'gw'">
+				AND d.id_device_type IN(3,6)
+			</if>
+
+			<if test="type == 'inverter-meter-sensor-manager'">
+				AND d.id_device_type IN(1,2,4,5)
+			</if>
+
+			<if test="type == 'inverter'">
+				AND d.id_device_type IN(1)
+			</if>
+			 
+			GROUP BY d.id
+	</select>
+
+
+	<select id="getLastRowItem">
+		SELECT
+			MAX( dv.time ) AS max_time,
+			FROM_UNIXTIME(MAX( dv.time ), '%d/%m/%Y %H:%i:%s') format_time,
+			NOW() AS now,
+			TIMESTAMPDIFF(MINUTE,FROM_UNIXTIME(MAX( dv.time )), NOW()) AS diff
+			
+		FROM
+			${table_name} dv 
+		WHERE
+			dv.id_device = #{id} 
+			LIMIT 1
+	</select>
+
+
+	<select id="checkExistAlerm">
+		SELECT
+			* 
+		FROM
+			alert a 
+		WHERE
+			a.id_device = #{id_device}
+			AND a.id_error = #{id_error}
+			AND a.`status` = 1 LIMIT 1;
+	</select>
+
+	<insert id="insertAlert" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO `alert`(
+			`id_device`,
+			`id_error`,
+			`start_date`,
+			`status`,
+			`created_date`
+		)VALUES(
+			#{id_device},
+			#{id_error},
+			#{start_date},
+			#{status},
+			NOW()
+		);
+	</insert>
+
+	<update id="closeAlarm">
+		UPDATE alert
+		SET
+			status = #{status},
+			end_date = NOW(),
+			updated_date = NOW()
+		WHERE id = #{id}
+	</update>
+
+
+	<select id="getAllDeviceUpdatedPlant">
+		SELECT
+			d.id,
+			d.`name`,
+			d.id_device,
+			dg.table_name,
+			d.id_device_type
+		FROM
+			device d 
+			LEFT JOIN device_group dg ON dg.id = d.id_device_group
+		WHERE
+			d.`status` = 1 
+			GROUP BY d.id
+	</select>
+
+	<select id="getLastRowItemInverter">
+		SELECT
+			MAX( dv.time ) AS max_time,
+			NOW() AS now,
+			<if test="id_device_type == 1">
+				dv.activeEnergy,
+				dv.activePower,
+			</if>
+			FROM_UNIXTIME(MAX( dv.time ), '%d/%m/%Y %H:%i:%s') format_time
+			
+		FROM
+			${table_name} dv 
+		WHERE
+			dv.id_device = #{id} 
+			LIMIT 1
+	</select>
+
+
+	<update id="updatedDevicePlant">
+		<foreach collection="dataDeviceUpdate" item="item" index="index" separator=";">
+			UPDATE device
+			SET
+				`power_now` = #{item.power_now},
+				`energy_today` = #{item.energy_today},
+				`last_month` = #{item.last_month},
+				`lifetime` = #{item.lifetime},
+				`last_updated` = #{item.last_updated}
+			WHERE
+				id = #{item.id}
+		</foreach>
+	</update>
+
+
+	<update id="resetTodayEnergy">
+			UPDATE device
+			SET
+				`energy_today` = #{energy_today}
+			WHERE 1
+	</update>
+
+	<update id="resetPowerNow">
+			UPDATE device
+			SET
+				`power_now` = #{power_now}
+			WHERE 1
+	</update>
+
+
+	<select id="getListDevice">
+		SELECT
+			d.id,
+			d.`name`,
+			d.id_device_type,
+			d.id_device_group,
+			d.id_device,
+			dg.table_name
+		FROM
+			device d 
+			LEFT JOIN device_group dg ON dg.id = d.id_device_group
+		WHERE
+			d.`status` = 1 
+			GROUP BY d.id
+	</select>
+
+
+	<select id="getDataUpdateDevice">
+		SELECT
+			dv.*,
+			t.energy_today,
+			l.energy_last_month
+		FROM
+			device d
+			LEFT JOIN ${table_name} dv ON dv.id_device = d.id
+			LEFT JOIN ( 
+				SELECT 
+				dv.id_device,
+				MAX(dv.activeEnergy) - MIN(dv.activeEnergy) AS energy_today
+				FROM ${table_name} dv 
+				WHERE dv.id_device = #{id_device} 
+				AND FROM_UNIXTIME(dv.time,'%d/%m/%Y') = DATE_FORMAT(NOW(), '%d/%m/%Y') 
+				AND dv.activeEnergy > 0 GROUP BY dv.id_device
+			)t ON t.id_device = d.id
+			
+			LEFT JOIN ( 
+				SELECT 
+				dv.id_device,
+				MAX(dv.activeEnergy) - MIN(dv.activeEnergy) AS energy_last_month
+				FROM ${table_name} dv 
+				WHERE dv.id_device = #{id_device} 
+				AND FROM_UNIXTIME( dv.time, '%m/%Y' ) = DATE_FORMAT( DATE_ADD(NOW(), INTERVAL -1 MONTH) , '%m/%Y') 
+				AND dv.activeEnergy > 0 GROUP BY dv.id_device
+			)l ON l.id_device = d.id
+			
+		WHERE
+			id = #{id_device} 
+			AND dv.activeEnergy > 0 
+			AND d.`status` 
+		ORDER BY
+			dv.time DESC 
+			LIMIT 1
+	</select>
+
+	<select id="getDataLastUpdate">
+		SELECT
+			dv.* 
+		FROM
+			${table_name} dv 
+		WHERE
+			dv.id_device = #{id_device}
+		ORDER BY
+			dv.time DESC 
+			LIMIT 1
+	</select>
+
+	
+
+	<select id="getListDevicePerformanceIndex">
+		SELECT
+			d.id,
+			d.id_project,
+			d.id_device_type,
+			d.id_device_group,
+			d.name,
+			d.model,
+			d.dc_size,
+			d.poa_irradiance,
+			d.panel_temperature,
+			d.max_ac_output,
+			d.sd_time_threshold,
+			d.sd_sunrise_sunset,
+			d.zg_time_threshold,
+			d.zg_sunrise_sunset,
+			d.pi_time_threshold,
+			d.pi_sunrise_sunset,
+			IFNULL(d.temperature_coefficient, 0.359) AS temperature_coefficient,
+			IFNULL(d.system_losses, 0.045) AS system_losses,
+			IFNULL(d.inverter_efficiency, 0.96) AS inverter_efficiency,
+			IFNULL(d.pi_index_value, 0.8) AS pi_index_value,
+			d.enable_system_disconnect,
+			d.enable_zeo_generation,
+			d.enable_device_faults,
+			d.enable_string_performance,
+			d.enable_performance_index,
+			d.sp_ratio,
+			d.sp_time_threshold,
+			d.sp_dc_current_threshold,
+			d.sp_sunrise_sunset,
+			d.sp_ratio_ai,
+			d.sp_type,
+			d.pi_type,
+			dg.table_name
+		FROM
+			device d 
+			LEFT JOIN device_group dg ON dg.id = d.id_device_group
+		WHERE
+			d.`status` = 1 AND d.id_device_type IN (1, 4) AND d.enable_performance_index = 1
+			GROUP BY d.id;
+	</select>
+
+
+	<select id="getTodayProd">
+		SELECT
+			IFNULL(ROUND( (MAX(dv.activeEnergy) - MIN(dv.activeEnergy)), 0), 0 ) AS todayProd,
+			(
+				SELECT 
+					IFNULL(ROUND(AVG(t.dayProd), 0), 0) AS averageDailyProd
+				FROM (
+					SELECT
+						dv.id_device,
+						FROM_UNIXTIME(dv.time, '%Y-%m-%d') AS format_date,
+						IFNULL(ROUND( (MAX(dv.activeEnergy) - MIN(dv.activeEnergy)), 0), 0 ) AS dayProd 	
+					FROM
+							${table_name} dv 
+					WHERE
+							dv.id_device = #{id_device}
+							AND dv.activeEnergy > 0
+							AND FROM_UNIXTIME(dv.time, '%Y-%m-%d') > DATE_FORMAT( ADDDATE( NOW(), INTERVAL -1 MONTH ), '%Y-%m-%d')
+							GROUP BY FROM_UNIXTIME(dv.time, '%Y-%m-%d')
+				)t 
+			) AS averageDailyProd
+		FROM
+			${table_name} dv 
+		WHERE
+			<!-- dv.id_device = #{id_device} AND FROM_UNIXTIME(dv.time, '%Y-%m-%d') = DATE_FORMAT( ADDDATE( NOW(), INTERVAL -1 DAY ), '%Y-%m-%d'); -->
+			dv.id_device = #{id_device} AND FROM_UNIXTIME(dv.time, '%Y-%m-%d') = DATE_FORMAT( NOW(), '%Y-%m-%d');
+	</select>
+
+	<update id="insertAlertPerformanceIndex">
+	INSERT INTO `alert`(
+				`id_device`,
+				`id_error`,
+				`start_date`,
+				`status`,
+				`created_date`
+			)VALUES
+			<foreach collection="dataErrors" item="item" index="index" separator=",">  
+				( 
+					#{item.id_device},
+					#{item.id_error},
+					UNIX_TIMESTAMP(NOW()),
+					#{item.status},
+					NOW()
+				 )  
+			</foreach> 
+	</update>
+
+	
+	<!-- <select id="getIrradiancePoA">
+		SELECT
+			ROUND(AVG( t.irradiancePoA ), 2) AS irradiancePoA
+		FROM
+			(
+			SELECT
+				FROM_UNIXTIME( dv.time ) AS aaa,
+				FLOOR(
+					UNIX_TIMESTAMP(
+						FROM_UNIXTIME( dv.time, '%Y-%m-%d %H:%i' ))/(
+						15 * 60 
+					)) AS time_key,
+				dv.irradiancePoA 
+			FROM
+				model_sensor_IMT_SiRS485 dv 
+			WHERE
+				FROM_UNIXTIME( dv.time, '%Y-%m-%d' ) = DATE_FORMAT( '2022-01-03', '%Y-%m-%d' ) 
+				AND dv.id_device = #{id_device}
+			GROUP BY
+			time_key 
+			)t
+	</select> -->
+
+	
+	<!-- <select id="getPanelTemperature">
+		SELECT
+			ROUND(AVG( t.panelTemp ), 2) AS panelTemp
+		FROM
+			(
+			SELECT
+				FLOOR(
+					UNIX_TIMESTAMP(
+						FROM_UNIXTIME( dv.time, '%Y-%m-%d %H:%i' ))/(
+						15 * 60 
+					)) AS time_key,
+				<if test="table_name == 'model_sensor_IMT_SiRS485'">
+					dv.panelTemp AS panelTemp
+				</if>
+
+				<if test="table_name == 'model_sensor_IMT_TaRS485'">
+					dv.ambientTemp AS panelTemp
+				</if>
+				
+			FROM
+				${table_name} dv 
+			WHERE
+				FROM_UNIXTIME( dv.time, '%Y-%m-%d' )= DATE_FORMAT( '2022-01-01', '%Y-%m-%d' ) 
+				AND dv.id_device = #{id_device} 
+			GROUP BY
+			time_key 
+			)t
+	</select> -->
+
+	
+	<select id="getDeviceInfo">
+		SELECT
+			d.id,
+			d.id_device,
+			d.id_project,
+			d.id_device_type,
+			d.id_device_group,
+			d.name,
+			d.model,
+			d.dc_size,
+			d.poa_irradiance,
+			d.panel_temperature,
+			d.max_ac_output,
+			d.sd_time_threshold,
+			d.sd_sunrise_sunset,
+			d.zg_time_threshold,
+			d.zg_sunrise_sunset,
+			d.pi_time_threshold,
+			d.pi_sunrise_sunset,
+			d.temperature_coefficient,
+			d.system_losses,
+			d.inverter_efficiency,
+			IFNULL(d.pi_index_value, 0.8) AS pi_index_value,
+			d.enable_system_disconnect,
+			d.enable_zeo_generation,
+			d.enable_device_faults,
+			d.enable_string_performance,
+			d.enable_performance_index,
+			d.sp_ratio,
+			d.sp_time_threshold,
+			d.sp_dc_current_threshold,
+			d.sp_sunrise_sunset,
+			d.sp_ratio_ai,
+			d.sp_type,
+			d.pi_type,
+			dg.table_name
+		FROM
+			device d 
+			LEFT JOIN device_group dg ON dg.id = d.id_device_group
+		WHERE
+			d.`status` = 1 AND d.id = #{id_device}
+			GROUP BY d.id;
+	</select>
+
+
+	
+	<select id="getDataDevice">
+		SELECT
+			dv.*,
+			FROM_UNIXTIME( (UNIX_TIMESTAMP(FROM_UNIXTIME( dv.time, '%Y-%m-%d %H:%i' ) ) DIV 900)*900, '%Y-%m-%d %H:%i' ) AS time_format,
+			FROM_UNIXTIME( (UNIX_TIMESTAMP(FROM_UNIXTIME( dv.time, '%Y-%m-%d %H:%i' ) ) DIV 900)*900, '%d/%m/%Y %H:%i' ) AS time_full
+		FROM
+			${table_name} dv
+			LEFT JOIN device d ON d.id = dv.id_device
+		WHERE
+			
+			dv.id_device = #{id_device} 
+			AND FROM_UNIXTIME(dv.time, '%Y-%m-%d') = DATE_FORMAT( NOW(), '%Y-%m-%d')
+			<!-- AND FROM_UNIXTIME(dv.time, '%Y-%m-%d') = DATE_FORMAT( ADDDATE( NOW(), INTERVAL -1 DAY ), '%Y-%m-%d') -->
+		GROUP BY time_format
+	</select>
+
+
+	<select id="getDataSensor">
+		 SELECT
+			dv.*,
+			FROM_UNIXTIME( (UNIX_TIMESTAMP(FROM_UNIXTIME( dv.time, '%Y-%m-%d %H:%i' ) ) DIV 900)*900, '%Y-%m-%d %H:%i' ) AS time_format,
+			FROM_UNIXTIME( (UNIX_TIMESTAMP(FROM_UNIXTIME( dv.time, '%Y-%m-%d %H:%i' ) ) DIV 900)*900, '%d/%m/%Y %H:%i' ) AS time_full
+		FROM
+			model_sensor_IMT_SiRS485 dv
+			LEFT JOIN device d ON d.id = dv.id_device
+			LEFT JOIN project p ON p.id = d.id_project
+		WHERE
+			dv.id_device = #{id_device} 
+			AND FROM_UNIXTIME(dv.time, '%Y-%m-%d') = DATE_FORMAT(  NOW(), '%Y-%m-%d')
+			<!-- AND FROM_UNIXTIME(dv.time, '%Y-%m-%d') = DATE_FORMAT( ADDDATE( NOW(), INTERVAL -1 DAY ), '%Y-%m-%d') -->
+		GROUP BY time_format
+	</select>
+</mapper>

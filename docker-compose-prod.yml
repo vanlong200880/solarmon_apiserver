@@ -1,0 +1,15 @@
+version: '1.0'
+services:
+  solarmon-apiserver:
+    build: 
+      context: .
+      dockerfile: Dockerfile.prod
+      args:
+        - REACT_APP_NAME=solarmon-apiserver-prod
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/app/src
+    # environment:
+    #   - REACT_APP_NAME=solarmon-apiserver-prod
+    #   - CHOKIDAR_USEPOLLING=true
