@@ -48,7 +48,7 @@
     context_path: 'api/',
     use_cluster: false,
     env : 'production',
-    listenPort: 3001,
+    listenPort: 3002,
     protocol: 'http://',
     use_ssl: false,
     ssl_option: {
@@ -120,8 +120,8 @@
   mysql: {
     host     : '103.110.86.197',
     port     : 3306,
-    user		: 'solarmon',
-    password     : 'sL4e2dripBS5X8Jc',
+    user		: 'solarmon_admin',
+    password     : 'Solarmon@123',
     database : 'solarmon',
     # The maximum number of connections to create at once. (Default: 10)
     connectionLimit : 20000, 
