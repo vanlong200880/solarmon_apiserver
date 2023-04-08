@@ -160,7 +160,7 @@
 					device d 
 					LEFT JOIN project p ON p.id = d.id_project
 					LEFT JOIN emloyee_project_map epm ON epm.id_project = p.id 
-				WHERE epm.id_employee = #{id_employee} AND d.`status` IN (1,0)  AND p.`status` = 1
+				WHERE epm.id_employee = #{id_employee} AND d.`status` IN (1,0)  AND p.`status` = 1 AND d.id_device_type = 1
 				GROUP BY
 					p.id
 			)y ON y.id_project = p.id

@@ -4882,3 +4882,1643 @@
     body: false
   }
 }
+[2023-03-16T22:41:46.818] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.setAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: undefined,
+    status: undefined
+  }
+}
+[2023-03-16T22:41:47.236] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:41:47.246] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:41:47.248] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:03.765] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:03.771] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:08.725] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:08.749] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:14.115] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:14.130] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:15.442] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:15.449] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:16.546] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:16.550] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:17.278] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:17.282] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:21.876] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:24.849] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:27.046] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:29.247] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:34.376] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:39.422] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:44.505] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:50.116] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:50.118] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:52.721] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:52.730] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:55.408] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:58.055] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:58.060] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:42:58.061] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:43:01.117] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:43:05.772] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:43:07.854] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:45:23.992] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:45:24.022] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:45:24.027] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:45:25.181] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:45:28.968] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:45:32.508] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:45:33.807] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:45:34.244] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T22:45:47.472] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T23:00:24.590] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T23:00:24.612] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T23:00:24.618] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T23:00:26.087] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T23:00:27.269] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T23:00:28.336] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T23:00:40.799] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T23:00:48.131] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T23:00:48.225] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T23:01:01.509] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T23:01:01.527] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-03-16T23:01:12.710] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:01:22.628] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.setAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: undefined,
+    status: undefined
+  }
+}
+[2023-04-08T14:01:23.007] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:01:23.018] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:01:23.021] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:02:26.751] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:02:26.760] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:02:43.201] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:02:43.206] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:03:06.402] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:03:06.407] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:03:55.935] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:03:55.945] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:04:07.173] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:04:07.177] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:04:36.057] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:04:39.099] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:05:49.780] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:05:49.786] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:05:49.793] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:05:55.268] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:05:58.473] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:12:13.898] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:12:13.910] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:12:13.912] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:12:26.803] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:12:32.786] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:12:38.232] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:14:03.802] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:14:12.499] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:14:12.516] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:14:15.812] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:14:15.815] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:14:22.376] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:14:22.382] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:14:35.483] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:14:35.487] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:14:35.488] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:17:41.099] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:17:41.107] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:17:41.109] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:19:38.755] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:19:38.768] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:19:38.776] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:19:49.352] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:19:49.353] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:20:06.482] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:20:06.484] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:20:48.919] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:20:48.936] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:20:48.946] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:21:26.192] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:21:26.220] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:21:26.257] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:27:33.872] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:27:33.876] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:27:39.829] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:27:39.831] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:28:33.496] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:28:33.503] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:28:33.501] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:31:52.874] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:31:52.907] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:31:52.910] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:31:56.238] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:31:56.242] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:31:56.243] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:32:04.484] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:32:04.493] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:32:28.821] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:32:28.824] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:32:35.581] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:32:35.583] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:33:51.823] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:33:51.828] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:35:29.631] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:35:29.651] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:36:36.631] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:36:36.639] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:36:39.542] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:36:39.548] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:36:47.726] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:36:47.736] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:36:54.823] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:36:54.855] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:37:02.497] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:38:10.151] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:38:46.923] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:38:46.927] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:38:46.928] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:39:29.924] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:39:29.931] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:39:43.408] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:39:43.416] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:39:43.421] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:39:43.423] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:40:01.048] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:40:01.052] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:40:23.325] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:40:23.332] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:40:23.333] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:40:23.335] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:40:41.241] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:40:41.248] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:40:41.262] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:40:41.264] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:42:14.747] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:42:14.761] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:42:14.763] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}
+[2023-04-08T14:42:14.765] [ERROR] elasticsearch.log - [Arguments] {
+  '0': 'ElasProvider.elas.getAsync:',
+  '1': NoConnections [Error]: No Living connections
+      at sendReqWithConnection (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/transport.js:226:15)
+      at next (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/node_modules/elasticsearch/src/lib/connection_pool.js:214:7)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11) {
+    body: false,
+    status: undefined
+  }
+}

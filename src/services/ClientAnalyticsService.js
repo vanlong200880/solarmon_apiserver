@@ -714,6 +714,7 @@ class ClientAnalyticsService extends BaseService {
 
 										dataDevice[i].data = dataEnergy5;
 										break;
+
 									case 'model_emeter_Vinasino_VSE3T5':
 										dataEnergy5 = Object.values([...arrTime5, ...dataEnergy].reduce((acc, {
 											time_format, time_full, categories_time,
@@ -858,6 +859,117 @@ class ClientAnalyticsService extends BaseService {
 	
 											dataDevice[i].data = dataEnergy5;
 											break;
+
+										
+											case 'model_emeter_Vinasino_VSE3T52023':
+												dataEnergy5 = Object.values([...arrTime5, ...dataEnergy].reduce((acc, {
+													time_format, time_full, categories_time,
+													activeEnergy,
+													activeEnergyRate1,
+													activeEnergyRate2,
+													activeEnergyRate3,
+													reverseActiveEnergy,
+													reverseActiveEnergyRate1,
+													reverseActiveEnergyRate2,
+													reverseActiveEnergyRate3,
+													reactiveEnergyInductive,
+													reactiveEnergyInductiveRate1,
+													reactiveEnergyInductiveRate2,
+													reactiveEnergyInductiveRate3,
+													reactiveEnergyCapacitive,
+													reactiveEnergyCapacitiveRate1,
+													reactiveEnergyCapacitiveRate2,
+													reactiveEnergyCapacitiveRate3,
+													currentPhaseA,
+													currentPhaseB,
+													currentPhaseC,
+													voltagePhaseA,
+													voltagePhaseB,
+													voltagePhaseC,
+													powerFrequency,
+													activePower,
+													reverseActivePower,
+													reactivePower,
+													reverseReactivePower,
+													powerFactor,
+													activePowerPhaseA,
+													activePowerPhaseB,
+													activePowerPhaseC,
+													reverseActivePowerPhaseA,
+													reverseActivePowerPhaseB,
+													reverseActivePowerPhaseC,
+													reactivePowerPhaseA,
+													reactivePowerPhaseB,
+													reactivePowerPhaseC,
+													reverseReactivePowerPhaseA,
+													reverseReactivePowerPhaseB,
+													reverseReactivePowerPhaseC,
+													powerFactorPhaseA,
+													powerFactorPhaseB,
+													powerFactorPhaseC,
+													CTratioPrimary,
+													CTratioSecondary,
+													PTratioPrimary,
+													PTratioSecondary
+												}) => {
+													acc[time_full] = {
+														time_format: time_format ? time_format : acc[time_full].time_format,
+														time_full: time_full ? time_full : acc[time_full].time_full,
+														categories_time: categories_time ? categories_time : acc[time_full].categories_time,
+														activeEnergy: activeEnergy ? activeEnergy : null,
+														activeEnergyRate1: activeEnergyRate1 ? activeEnergyRate1 : null,
+														activeEnergyRate2: activeEnergyRate2 ? activeEnergyRate2 : null,
+														activeEnergyRate3: activeEnergyRate3 ? activeEnergyRate3 : null,
+														reverseActiveEnergy: reverseActiveEnergy ? reverseActiveEnergy : null,
+														reverseActiveEnergyRate1: reverseActiveEnergyRate1 ? reverseActiveEnergyRate1 : null,
+														reverseActiveEnergyRate2: reverseActiveEnergyRate2 ? reverseActiveEnergyRate2 : null,
+														reverseActiveEnergyRate3: reverseActiveEnergyRate3 ? reverseActiveEnergyRate3 : null,
+														reactiveEnergyInductive: reactiveEnergyInductive ? reactiveEnergyInductive : null,
+														reactiveEnergyInductiveRate1: reactiveEnergyInductiveRate1 ? reactiveEnergyInductiveRate1 : null,
+														reactiveEnergyInductiveRate2: reactiveEnergyInductiveRate2 ? reactiveEnergyInductiveRate2 : null,
+														reactiveEnergyInductiveRate3: reactiveEnergyInductiveRate3 ? reactiveEnergyInductiveRate3 : null,
+														reactiveEnergyCapacitive: reactiveEnergyCapacitive ? reactiveEnergyCapacitive : null,
+														reactiveEnergyCapacitiveRate1: reactiveEnergyCapacitiveRate1 ? reactiveEnergyCapacitiveRate1 : null,
+														reactiveEnergyCapacitiveRate2: reactiveEnergyCapacitiveRate2 ? reactiveEnergyCapacitiveRate2 : null,
+														reactiveEnergyCapacitiveRate3: reactiveEnergyCapacitiveRate3 ? reactiveEnergyCapacitiveRate3 : null,
+														currentPhaseA: currentPhaseA ? currentPhaseA : null,
+														currentPhaseB: currentPhaseB? currentPhaseB : null,
+														currentPhaseC: currentPhaseC ? currentPhaseC : null,
+														voltagePhaseA: voltagePhaseA ? voltagePhaseA : null,
+														voltagePhaseB: voltagePhaseB ? voltagePhaseB : null,
+														voltagePhaseC: voltagePhaseC ? voltagePhaseC : null,
+														powerFrequency: powerFrequency ? powerFrequency : null,
+														activePower: activePower ? activePower : null,
+														reverseActivePower: reverseActivePower ? reverseActivePower : null,
+														reactivePower: reactivePower ? reactivePower : null,
+														reverseReactivePower: reverseReactivePower ? reverseReactivePower : null,
+														powerFactor: powerFactor ? powerFactor : null,
+														activePowerPhaseA: activePowerPhaseA ? activePowerPhaseA : null,
+														activePowerPhaseB: activePowerPhaseB ? activePowerPhaseB : null,
+														activePowerPhaseC: activePowerPhaseC ? activePowerPhaseC : null,
+														reverseActivePowerPhaseA: reverseActivePowerPhaseA ? reverseActivePowerPhaseA : null,
+														reverseActivePowerPhaseB: reverseActivePowerPhaseB ? reverseActivePowerPhaseB : null,
+														reverseActivePowerPhaseC: reverseActivePowerPhaseC ? reverseActivePowerPhaseC : null,
+														reactivePowerPhaseA: reactivePowerPhaseA ?  reactivePowerPhaseA: null,
+														reactivePowerPhaseB: reactivePowerPhaseB ? reactivePowerPhaseB : null,
+														reactivePowerPhaseC: reactivePowerPhaseC ? reactivePowerPhaseC : null,
+														reverseReactivePowerPhaseA: reverseReactivePowerPhaseA ? reverseReactivePowerPhaseA : null,
+														reverseReactivePowerPhaseB: reverseReactivePowerPhaseB ? reverseReactivePowerPhaseB : null,
+														reverseReactivePowerPhaseC: reverseReactivePowerPhaseC ? reverseReactivePowerPhaseC : null,
+														powerFactorPhaseA: powerFactorPhaseA ? powerFactorPhaseA : null,
+														powerFactorPhaseB: powerFactorPhaseB ? powerFactorPhaseB : null,
+														powerFactorPhaseC: powerFactorPhaseC ? powerFactorPhaseC : null,
+														CTratioPrimary: CTratioPrimary ? CTratioPrimary : null,
+														CTratioSecondary: CTratioSecondary ? CTratioSecondary : null,
+														PTratioPrimary: PTratioPrimary ? PTratioPrimary : null,
+														PTratioSecondary: PTratioSecondary ? PTratioSecondary: null
+													};
+													return acc;
+												}, {}));
+		
+												dataDevice[i].data = dataEnergy5;
+												break;
+
 								}
 
 								break;

@@ -158,7 +158,7 @@
 					SUM(d.lifetime) AS lifetime
 				FROM
 					device d 
-				WHERE d.`status` = 1 AND d.is_virtual = 1
+				WHERE d.`status` = 1 AND d.is_virtual = 1 AND d.id_device_type = 1
 				GROUP BY
 					d.id_project
 			)y ON y.id_project = p.id

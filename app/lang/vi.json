@@ -3,9 +3,7 @@
 	"OLD_PASSWORD_INCORRECT": "Mật khẩu cũ không đúng",
 	"NEW_PASSWORD_INCORRECT": "Mật khẩu mới không đúng",
 	"ERROR_CHANGE_PASSWORD": "Đổi mật khẩu thất bại. Vui lòng thử lại sau.",
-	"CHANGE_PASSWORD_SUCCESS": "Đổi mật khẩu thành công.",	
-
-
+	"CHANGE_PASSWORD_SUCCESS": "Đổi mật khẩu thành công.",
 	"employee.first_name": "Họ và tên đệm",
 	"employee.last_name": "Tên",
 	"employee.email": "Email",
@@ -16,7 +14,6 @@
 	"employee.password_not_exist": "Mật khẩu cũ không đúng",
 	"employee.role_data": "Bạn chưa chọn phòng ban",
 	"employee.exist_email": "Email đã tồn tại",
-
 	"role.name": "Tên phòng ban",
 	"role.id_company": "Công ty",
 	"role.exist_name": "Chức vụ đã tồn tại",
@@ -49,7 +46,6 @@
 	"news.id_new_category": "Danh mục tin tức",
 	"customer.exist_name": "Email đã tồn tại",
 	"customer.is_use": "Khách hàng không được phép xoá",
-
 	"orders.title": "Hoá đơn bán hàng",
 	"orders.created": "Ngày",
 	"orders.id": "Mã đơn hàng",
@@ -64,7 +60,7 @@
 	"orders.price": "Giá",
 	"orders.quantity": "Số lượng",
 	"orders.unit_name": "Đơn vị",
-	"orders.sub_total" : "Thành tiền",
+	"orders.sub_total": "Thành tiền",
 	"orders.supplier_name": "Nhà cung cấp",
 	"orders.person_ship": "Người giao",
 	"orders.iso_code": "Số hoá đơn",
@@ -91,30 +87,12 @@
 	"orders.bridge_width": "Fridge width",
 	"orders.frame_width": "Frame width",
 	"orders.result_pd": "Kết quả đo đồng tử",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	"STAFF.staff_not_exist": "Tài khoản không hợp lệ",
-	
 	"stores.id_company": "Mã công ty",
 	"stores.name": "Tên kho",
 	"stores.manage_name": "Tên người quản lý",
 	"stores.manage_email": "Email người quản lý",
 	"stores.manage_phone": "Điện thoại người quản lý",
-
 	"store.id": "Mã kho",
 	"store.store_code": "Mã kho",
 	"store.name": "Tên kho",
@@ -123,24 +101,21 @@
 	"store.description": "Ghi chú",
 	"store.exist": "Mã kho đã tồn tại",
 	"store.exist_name": "Tên kho đã tồn tại",
-
-	"supplier.id_company" : "Mã công ty",
+	"supplier.id_company": "Mã công ty",
 	"supplier.name": "Tên nhà cung cấp",
 	"supplier.exist_name": "Nhà cung cấp đã tồn tại",
-
 	"category.exist_name": "Tên nhóm dịch vụ đã tồn tại",
 	"category.parent_its_duplicate": "Dịch vụ cấp cha không được trùng với chính nó",
 	"product.exist_name": "Tên dịch vụ đã tồn tại",
-
 	"import_stores_print.title": "Phiếu nhập kho",
 	"print.address": "Địa chỉ",
-	"print.email": "Email", 
+	"print.email": "Email",
 	"print.phone": "Điện thoại",
 	"print_import.name_title": "Tên dịch vụ",
 	"print_import.price": "Giá",
 	"print_import.quantity": "Số lượng",
 	"print_import.unit_name": "Đơn vị",
-	"print_import.sub_total" : "Thành tiền",
+	"print_import.sub_total": "Thành tiền",
 	"print_import.supplier_name": "Nhà cung cấp",
 	"print_import.created": "Ngày tạo",
 	"print_import.person_ship": "Người giao",
@@ -166,14 +141,12 @@
 	"print_export.note": "Lý do xuất",
 	"print_import.person_receive": "Người nhận hàng",
 	"print_import.director_manage": "Giám đốc",
-
 	"branch.exist_name": "Chi nhánh đã tồn tại",
 	"branch.id_company": "Tên công cty",
 	"branch.id_nation": "Quốc gia",
 	"branch.id_province": "Tỉnh/Thành phố",
 	"branch.id_district": "Quận/Huyện",
 	"branch.id_ward": "Phường/Xã",
-
 	"type_video": "$<1> phải là định dạng , mp4 hoặc avi",
 	"company.video": "Video",
 	"type_image": "$<1> phải là định dạng , jpg hoặc png",
@@ -195,12 +168,10 @@
 	"room.exits_date": "Thời gian đã tồn tại",
 	"room.saleoff_name": "Tên chương trình",
 	"room.saleoff_value": "Giá trị",
-
 	"booking.exist_date": "Phòng đã có người đặt hoặc đang sửa",
 	"branch_company.id_company": "Công ty",
 	"branch_company.name": "Tên công ty",
 	"barnch_company.exist_name": "Tên công ty đã tồn tại",
-
 	"fixing_room.start_date": "Ngày bắt đầu",
 	"fixing_room.end_date": "Ngày hoàn thành",
 	"fixing_room.content": "Lý do sửa",
@@ -256,7 +227,7 @@
 	"receipt_print.cty_address": "Địa chỉ",
 	"receipt_print.id_number": "Số phiếu",
 	"receipt_print.fullname_slip": "Họ và tên người nhận tiền",
-	"company_money_fund.id_company" : "Mã công ty",
+	"company_money_fund.id_company": "Mã công ty",
 	"company_money_fund.name": "Tên quỹ",
 	"company_money_fund.exist_name": "Tên quỹ đã tồn tại",
 	"booking_order.id_company": "Công ty",
@@ -276,13 +247,6 @@
 	"coupon.to_date": "Đến ngày",
 	"coupon.total": "Tổng số lượng coupon",
 	"coupon.exist_coupon_code": "Mã coupon đã sử dụng",
-	
-
-
-
-
-
-
 	"ACTION.INVOICE_SLIP_SAVE_SUCCESS": "Tạo phiếu chi thành công",
 	"ACTION.INVOICE_SAVE_SUCCESS": "Tạo phiếu thu thành công",
 	"ACTION.MERGE_GROUP_SUCCESS": "Ghép đoàn thành công",
@@ -361,9 +325,9 @@
 	"user_name": "Tên đăng nhập",
 	"password": "Mật khẩu",
 	"headquarter_code": "Mã trụ sở",
-	"contract.id":"Mã dịch vụ",
-	"contract.name":"Tên dịch vụ",
-	"contract.price":"Giá",
+	"contract.id": "Mã dịch vụ",
+	"contract.name": "Tên dịch vụ",
+	"contract.price": "Giá",
 	"country.id": "Mã quốc gia",
 	"country.name": "Tên quốc gia",
 	"material.id": "Mã VT",
@@ -468,7 +432,6 @@
 	"job.title": "Danh mục nghề nghiệp",
 	"job.name_exist": "Tên nghề nghiệp đã tồn tại",
 	"job.code_exist": "Mã nghề nghiệp đã tồn tại",
-	
 	"position.name": "Tên chức danh",
 	"department.id": "Mã khoa",
 	"department.code_bhyt": "Mã BHYT",
@@ -605,7 +568,6 @@
 	"service.note": "Ghi chú",
 	"service.id": "Mã dịch vụ",
 	"service.title": "Danh mục dịch vụ",
-	
 	"user.department_id": "Khoa",
 	"user.position_id": "Chức danh",
 	"user.full_name": "Tên người dùng",
@@ -1645,11 +1607,10 @@
 	"company.phone": "Điện thoại",
 	"company.vat": "Mã số thuế",
 	"company.note": "Ghi chú",
-	"company.contact_person" : "Người liên hệ",
+	"company.contact_person": "Người liên hệ",
 	"company.title": "Danh mục công ty",
 	"company.exist": "Mã công ty đã tồn tại",
-	"company.exist_name" : "Công ty đã tồn tại",
-
+	"company.exist_name": "Công ty đã tồn tại",
 	"patient_examine_time.prefix_examine_tile": "LK",
 	"patient_examine_time.reason": "Lý do vào viện",
 	"patient_examine_time.history": "Hỏi bệnh",
@@ -1689,7 +1650,6 @@
 	"tree.parent_id": "Mã cha",
 	"tree.index_tbs": "Thứ tự",
 	"tree.headquarter_id": "Trụ sở",
-
 	"hospital_transfer.transfer_success": "Chuyển viện thành công",
 	"hospital_transfer.transfer_fail": "Chuyển viện thất bại",
 	"hospital_transfer.hospital_transfer_type": "Loại tuyến",
@@ -1712,5 +1672,6 @@
 	"hospital_transfer.transfer_method": "Phương tiện vận chuyển",
 	"hospital_transfer.user_name": "Họ tên người đưa đi",
 	"hospital_transfer.placeholder-user-name": "Chọn người đưa đi",
-	"hospital_transfer.transfer_date": "Ngày chuyển viện"
+	"hospital_transfer.transfer_date": "Ngày chuyển viện",
+	"id_company": "id_company"
 }

@@ -58,9 +58,9 @@ class MainProjectService extends BaseService {
 					for (var i = 0; i < dataList.length; i++) {
 						// get group device
 						var item = dataList[i];
-						var deviceGroupInverter = await db.queryForList("MainProject.getGroupDeviceByProjectId", item);
+						// var deviceGroupInverter = await db.queryForList("MainProject.getGroupDeviceByProjectId", item);
 						// var energy_today = 0, lifetime = 0, activePower = 0, last_month_activeEnergy = 0;
-						if (deviceGroupInverter && deviceGroupInverter.length > 0) {
+						// if (deviceGroupInverter && deviceGroupInverter.length > 0) {
 							// Get data energy 
 							// let objDevice = await db.queryForObject("MainProject.getDataDeviceEnergy", { deviceGroupInverter });
 							// if (objDevice) {
@@ -70,7 +70,7 @@ class MainProjectService extends BaseService {
 							// 	last_month_activeEnergy = objDevice.last_month_activeEnergy;
 
 							// }
-						}
+						// }
 
 						// Get irradiance by project
 						var irradiance = await db.queryForList("MainProject.getIrradianceByProjectId", item);

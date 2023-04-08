@@ -748,3 +748,73 @@
       at endReadableNT (internal/streams/readable.js:1334:12)
       at processTicksAndRejections (internal/process/task_queues.js:82:21)
 }
+[2023-03-16T22:41:21.705] [ERROR] LibLog - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at Function.Libs.decodeTokenCrypto (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/utils/Libs.js:597:15)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:85:23)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-16T22:41:29.093] [ERROR] LibLog - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at Function.Libs.decodeTokenCrypto (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/utils/Libs.js:597:15)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:85:23)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-16T22:41:44.503] [ERROR] LibLog - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at Function.Libs.decodeTokenCrypto (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/utils/Libs.js:597:15)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:85:23)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-03-16T22:41:46.729] [ERROR] LibLog - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at Function.Libs.decodeTokenCrypto (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/utils/Libs.js:597:15)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:85:23)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-04-08T14:01:10.728] [ERROR] LibLog - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at Function.Libs.decodeTokenCrypto (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/utils/Libs.js:597:15)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:85:23)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-04-08T14:01:16.064] [ERROR] LibLog - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at Function.Libs.decodeTokenCrypto (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/utils/Libs.js:597:15)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:85:23)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
+[2023-04-08T14:01:22.545] [ERROR] LibLog - [Arguments] {
+  '0': SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at Function.Libs.decodeTokenCrypto (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/utils/Libs.js:597:15)
+      at IncomingMessage.<anonymous> (/Volumes/Data/sources/solarmon_production/solarmon_apiserver/app/core/Router.js:85:23)
+      at IncomingMessage.emit (events.js:412:35)
+      at IncomingMessage.emit (domain.js:537:15)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+}
