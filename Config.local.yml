@@ -127,7 +127,7 @@
 
     host     : '103.110.86.197',
     port     : 3306,
-    user		: 'solarmon_admin',
+    user		: 'root',
     password     : 'Solarmon@123',
     database : 'solarmon',
 
